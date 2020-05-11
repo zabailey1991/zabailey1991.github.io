@@ -5,20 +5,20 @@
     <link rel ="stylesheet" type = "text/css" href="/style.css">
     <title>Zack's Test Site</title>
     <script>
-var random_number = Math.floor(Math.random()*500000+100000);
-var accountArray= ["Mango Inc", "Papaya Co", "Pineapple Corp"];
-var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
-(function(apiKey){
-   (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-   v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
-       o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-       y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-       z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+      var random_number = Math.floor(Math.random()*500000+100000);
+      var accountArray= ["Mango Inc", "Papaya Co", "Pineapple Corp"];
+      var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
+      (function(apiKey){
+       (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+          v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+          o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+          y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+          z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
 
        // Call this whenever information about your visitors becomes available
        // Please use Strings, Numbers, or Bools for value types.
-       pendo.initialize({
-           visitor: {
+        pendo.initialize({
+            visitor: {
                id: random_number,
                email: random_number+'@gmail.com',
                // full_name:    // Recommended if using Pendo Feedback
@@ -26,9 +26,9 @@ var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
 
                // You can add any additional visitor level key-values here,
                // as long as it's not one of the above reserved names.
-           },
+             },
 
-           account: {
+            account: {
                id: random_account, // Highly recommended
                // name:         // Optional
                // is_paying:    // Recommended if using Pendo Feedback
@@ -39,9 +39,9 @@ var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
 
                // You can add any additional account level key-values here,
                // as long as it's not one of the above reserved names.
-           }
-       });
-})('14c13183-f8b2-4cc9-6794-d0c979a4f01a');
+            }
+        });
+  })('14c13183-f8b2-4cc9-6794-d0c979a4f01a');
 </script>
   <!-- End of Pendo snippet -->
   </head>
@@ -69,6 +69,8 @@ var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
       <li></li>
       <li></li>
     </ul>
+    
+    <button type="button">Click Me!</button>
 
 
   </body>
