@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <link rel ="stylesheet" type = "text/css" href="/style.css">
     <title>Zack's Test Site</title>
+    
+<script>
+function annotateUrl(){ 
+var toDrop = ['id']; 
+var toAdd = { page: 'annotateTest' }; 
+return { 
+exclude: toDrop, 
+include: toAdd 
+};
+};
+ 
+</script>
+    
 <script>
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
@@ -48,17 +61,7 @@
   <!-- End of Pendo snippet -->
     
     
-    <script>
-function annotateUrl(){ 
-var toDrop = ['id']; 
-var toAdd = { page: 'annotateTest' }; 
-return { 
-exclude: toDrop, 
-include: toAdd 
-};
-};
- 
-    </script>
+
     
   </head>
   <body>
