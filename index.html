@@ -37,7 +37,7 @@
                 // You can add any additional account level key-values here,
                 // as long as it's not one of the above reserved names.
             },
-                     annotateUrl: annotateUrl(page: ‘home’) {
+                      annotateUrl: annotateUrl {
                        
         })
  
@@ -49,31 +49,14 @@
     
     
     <script>
-                / determine if page has changed internally (browser location remains unchanged) 
-// NOTE: hasUrlChanged() is not a real function. You need to write your own function that checks if the URL has changed. 
-var​ urlHasChanged = hasUrlChanged(); 
-// object or array 
-var​ lastAnnotation = {}; ​// or { page: 'Settings' }, for example 
+function annotateUrl(){ 
+var toDrop = ['id']; 
+var toAdd = { page: 'annotateTest' }; 
+return { 
+exclude: toDrop, 
+include: toAdd 
+};
  
-function​ ​annotateUrl​ () { 
-   ​// check for page changes 
-   ​// annotateUrl will be called 10x per second so caching is important 
-   ​if​ (!urlHasChanged) ​return​ lastAnnotation; 
- 
-   ​// get current page 
-   ​var​ page = getCurrentPage(); ​// returns the name of the current page being viewed 
- 
-   ​var​ annotation = { page: page }; 
- 
-   ​// assign for future caching 
-   lastAnnotation = annotation; 
-   urlHasChanged = ​false​; 
- 
-   ​// return new object or array 
-   ​// EXAMPLE: if annotation = { page: 'home' } and browser location is https://www.google.com 
-   ​// then events will be sent to Pendo with url =https://www.google.com?page=home 
-   ​return​ annotation; 
-}; 
     </script>
     
   </head>
@@ -88,7 +71,7 @@ function​ ​annotateUrl​ () {
       <li>Rocket League</li>
       <li>League of Legends</li>
       <li>Apex Legends</li>
-      <li>Test2 </>
+      <li>Test3 </>
     </ul>
 
     <br>
